@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle height="500.0" smooth="false" stroke="TRANSPARENT" strokeType="INSIDE" width="500.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="0.47318615747927123" startX="0.570977893913582" startY="0.7791798182466428">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color green="0.3425438702106476" blue="0.6228070259094238" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.7427293064876955">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9561403393745422" green="0.7489765882492065" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="400.0" layoutX="3.0" stroke="TRANSPARENT" strokeType="INSIDE" width="400.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0" />
+      <Button layoutX="184.0" layoutY="289.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="132.0" text="Login" />
+      <TextField layoutX="214.0" layoutY="149.0" />
+      <TextField layoutX="214.0" layoutY="209.0" />
+      <Label layoutX="136.0" layoutY="153.0" text="User name:" />
+      <Label layoutX="139.0" layoutY="213.0" text="Password:" />
+   </children>
+</AnchorPane>
