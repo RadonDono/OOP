@@ -13,7 +13,7 @@ public class map {
     int rasn;
     int yaln;
     ArrayList<ras> rases=new ArrayList<>();
-    File file =new File("C:\\Users\\Nik\\IdeaProjects\\testmap\\src\\graph.txt");
+    File file =new File("src//graph.txt");
     public map(){
         try {
             Scanner scanmap=new Scanner(file);

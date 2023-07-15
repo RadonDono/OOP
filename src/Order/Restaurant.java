@@ -9,7 +9,6 @@ public class Restaurant
     public static ArrayList<Restaurant> restaurants=new ArrayList<>();
     //////////////////////////////////////////////////////////////////////
 //
-    //  8-->
     private final int restaurantID;
     private final int ownerID;
     private String name;
