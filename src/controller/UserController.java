@@ -101,7 +101,11 @@ public class UserController {
     }
 
     public ArrayList<Comment> getfoodcomment(int foodid) {
-        return Food.getFood(foodid).getcomment();
+        if(!Food.getFood(foodid).getcomment().equals(null))
+        {
+            return Food.getFood(foodid).getcomment();
+        }
+        return new ArrayList<Comment>();
     }
 
     public Double getrate() {

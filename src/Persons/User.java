@@ -4,6 +4,7 @@ import GetID.GetRandomID;
 import LocationAndMap.ras;
 import Order.Order;
 import Order.Status;
+import Order.Restaurant;
 
 import java.util.ArrayList;
 
@@ -169,6 +170,29 @@ public class User extends Person
             }
         }
         return false;
+    }
+
+    public ArrayList<Restaurant> suggestSystem()
+    {
+        ArrayList<Restaurant> restaurants=new ArrayList<>();
+        ArrayList<String> foodTypes=new ArrayList<>();
+        for(int ID:finishedOrdersID)
+        {
+            Order order=Order.getOrder(ID);
+            Restaurant temp=Restaurant.getRestaurant(order.getRestaurantID());
+            foodTypes.add(temp.getFoodType());
+        }
+        for(Restaurant restaurant:Restaurant.restaurants)
+        {
+            for (String foodType:foodTypes)
+            {
+                if(restaurant.getFoodType().equals(foodType))
+                {
+                    restaurants.add(restaurant);
+                }
+            }
+        }
+        return restaurants;
     }
 
 

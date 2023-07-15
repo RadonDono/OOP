@@ -116,7 +116,7 @@ public class Welcome extends Menu {
     private void registerAdmin() {
         String username = this.getInput("enter username");
         String password = this.getInput("enter password");
-        String number=("how much restaurant do you have?");
+        String number=this.getInput("how much restaurant do you have?");
         Message message = this.controller.handleCreateAdmin(username, password);
         for (int i = 0; i <Integer.parseInt(number) ; i++) {
             String name = this.getInput("enter name");
