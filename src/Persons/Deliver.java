@@ -4,6 +4,8 @@ import LocationAndMap.ras;
 
 import java.util.ArrayList;
 import GetID.GetRandomID;
+import Order.Order;
+import Order.*;
 
 public class Deliver extends Person
 {
@@ -11,7 +13,8 @@ public class Deliver extends Person
     static ArrayList<Deliver> delivers=new ArrayList<>();
     //////////////////////////////////////////////////////////////////////
 //
-    private ras location;
+    public ArrayList<Order> receivedOrders;
+    public Order using=null;
 
 
 
@@ -30,6 +33,24 @@ public Deliver(String Name,String Password)
 
 //////////////////////////////////////////////////////////////////////
 //functions
+
+    public void acceptOrder(int orderID)
+    {
+        if(Order.getOrder(orderID)!=null&&using==null)
+        {
+            using=Order.getOrder(orderID);
+            Order.getOrder(orderID).setStatus(Status.InWay);
+        }
+    }
+    public void deliverFood(int orderID)
+    {
+        if(using.equals(Order.getOrder(orderID)))
+        {
+            using=null;
+            Order.getOrder(orderID).setStatus(Status.Delivered);
+            receivedOrders.add(Order.getOrder(orderID));
+        }
+    }
 
 
     //////////////////////////////////////////////////////////////////////

@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class Restaurant
 {
     public static ArrayList<Restaurant> restaurants=new ArrayList<>();
-    //////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
 //
     private final int restaurantID;
     private final int ownerID;
